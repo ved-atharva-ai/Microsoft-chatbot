@@ -6,7 +6,7 @@ load_dotenv()
 import os
 class MyBot(ActivityHandler):
     def __init__(self):
-        api_key = os.getenv(API_KEY)
+        api_key = os.getenv("API_KEY")
         self.agent = LangChainAgent(api_key)
 
     async def on_message_activity(self, turn_context: TurnContext):
